@@ -1,4 +1,4 @@
 #!/bin/bash
 
-CASSANDRA_DIR=/opt/cassandra
+CASSANDRA_HOME_DIR=/opt/cassandra
 

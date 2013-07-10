@@ -1,13 +1,14 @@
 #!/bin/bash
 
-clush -g datanodes -c files/cassandra-topology.properties --dest='/opt/cassandraB/conf'
-clush -g datanodes -c files/cassandra.yaml --dest='/opt/cassandraB/conf'
+. files/cluster-properties.sh
 
-clush -g datanodes -l cassandra 'export READ=$(cat /opt/TOKEN.txt);echo "initial_token: $READ" >> /opt/cassandraB/conf/cassandra.yaml'
+clush -g datanodes -c files/cassandra-topology.properties --dest="$CASSANDRA_HOME_DIR/conf"
+clush -g datanodes -c files/cassandra.yaml --dest="$CASSANDRA_HOME_DIR/conf"
 
-
-clush -g datanodes <<\EOF
+clush -g datanodes <<EOF
+export TOKEN=$(cat /opt/TOKEN.txt)
 export READ=$(grep IPADDR /etc/sysconfig/network-scripts/ifcfg-eth0 |awk -F= '{print $2}')
-echo "listen_address: $READ" >> /opt/cassandraB/conf/cassandra.yaml
+echo "initial_token: \$READ" >> /opt/cassandraB/conf/cassandra.yaml
+echo "listen_address: \$READ" >> $CLUSTER_DIR/conf/cassandra.yaml
 EOF
 
