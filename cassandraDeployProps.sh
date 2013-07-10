@@ -1,7 +1,7 @@
 #!/bin/bash
 
-clush -g datanodes -c cassandra-topology.properties --dest='/opt/cassandraB/conf'
-clush -g datanodes -c cassandra.yaml --dest='/opt/cassandraB/conf'
+clush -g datanodes -c files/cassandra-topology.properties --dest='/opt/cassandraB/conf'
+clush -g datanodes -c files/cassandra.yaml --dest='/opt/cassandraB/conf'
 
 clush -g datanodes -l cassandra 'export READ=$(cat /opt/TOKEN.txt);echo "initial_token: $READ" >> /opt/cassandraB/conf/cassandra.yaml'
 
