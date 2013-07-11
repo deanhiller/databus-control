@@ -1,0 +1,12 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+export JAVA_HOME=/opt/jdk
+export PATH=$JAVA_HOME/bin:$PATH
+export CASSANDRA_HOME=/opt/cassandraB
+export PATH=$CASSANDRA_HOME/bin:$PATH
