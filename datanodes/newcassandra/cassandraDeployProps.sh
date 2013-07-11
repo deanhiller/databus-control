@@ -7,9 +7,9 @@
 
 . files/cluster-properties.sh
 
-clush -g datanodes mkdir /var/log/cassand2log
+clush -g datanodes mkdir /var/log/cassandrB
 clush -g datanodes mkdir /opt/cassandra-1.2.2b
-clush -g datanodes chown cassandra:cassandra /var/log/cassand2log
+clush -g datanodes chown cassandra:cassandra /var/log/cassandrB
 clush -g datanodes chown cassandra:cassandra /opt/cassandra-1.2.2b
 clush -g datanodes ln -s /opt/cassandra-1.2.2b /opt/cassandraB
 clush -g datanodes cp -r /opt/cassandra/* /opt/cassandraB

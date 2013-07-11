@@ -91,10 +91,10 @@ partitioner: org.apache.cassandra.dht.Murmur3Partitioner
 
 # directories where Cassandra should store data on disk.
 data_file_directories:
-    - /opt/datastore/data2/data_files
+    - /opt/datastore/dataB/data_files
 
 # commit log
-commitlog_directory: /opt/datastore/commitlog/log
+commitlog_directory: /opt/datastore/commitlog/logB
 
 # policy for data disk failures:
 # stop: shut down gossip and Thrift, leaving the node effectively dead, but
@@ -172,7 +172,7 @@ row_cache_save_period: 0
 row_cache_provider: SerializingCacheProvider
 
 # saved caches
-saved_caches_directory: /opt/datastore/data2/cache
+saved_caches_directory: /opt/datastore/dataB/cache
 
 # commitlog_sync may be either "periodic" or "batch." 
 # When in batch mode, Cassandra won't ack writes until the commit log
