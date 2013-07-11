@@ -2,6 +2,8 @@
 
 #run clush -g datanodes cp /opt/TOKEN.txt /opt/TOKEN2.txt
 #generate tokens with python -c 'print [str(((2**64 / 4) * i) - 2**63) for i in range(4)]' and put in TOKEN2.txt files all around
+#modify the cassandra-topologies to be ALL IP addresses only!!!!
+#need to worry about the .bashrc script and when we finally modify that one as well
 
 . files/cluster-properties.sh
 
