@@ -8,7 +8,7 @@
 
 echo "Displaying hard disk space and sleeping so kill this process if too much disk space used"
 
-clush -g webnodes df -h /
+clush -g allwebnodes df -h /
 df -h 
 
 echo "Sleeping, kill process if any node is using too much disk"
