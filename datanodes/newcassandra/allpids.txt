@@ -1,0 +1,12 @@
+a1.bigde.nrel.gov: 26449
+a3.bigde.nrel.gov: 20517
+a5.bigde.nrel.gov: 7885
+a11.bigde.nrel.gov: 11554
+a8.bigde.nrel.gov: 8349
+a6.bigde.nrel.gov: 5812
+a9.bigde.nrel.gov: 21096
+a7.bigde.nrel.gov: 24948
+a10.bigde.nrel.gov: 32651
+a12.bigde.nrel.gov: 13279
+a4.bigde.nrel.gov: 7417
+a2.bigde.nrel.gov: 2271

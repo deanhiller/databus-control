@@ -7,7 +7,7 @@
 
 # The name of the cluster. This is mainly used to prevent machines in
 # one logical cluster from joining another.
-cluster_name: 'QACluster'
+cluster_name: 'DatabusCluster'
 
 # This defines the number of tokens randomly assigned to this node on the ring
 # The more tokens, relative to other nodes, the larger the proportion of data
@@ -211,7 +211,7 @@ seed_provider:
       parameters:
           # seeds is actually a comma-delimited list of addresses.
           # Ex: "<ip1>,<ip2>,<ip3>"
-          - seeds: "10.20.5.83,10.20.5.84"
+          - seeds: "10.10.43.3,10.10.43.4,10.10.43.5"
 
 # emergency pressure valve: each time heap usage after a full (CMS)
 # garbage collection is above this fraction of the max, Cassandra will
@@ -595,7 +595,7 @@ request_scheduler: org.apache.cassandra.scheduler.NoScheduler
 # offs.  This value is not often changed, however if you have many
 # very small rows (many to an OS page), then increasing this will
 # often lower memory usage without a impact on performance.
-index_interval: 128
+index_interval: 512
 
 # Enable or disable inter-node encryption
 # Default settings are TLS v1, RSA 1024-bit keys (it is imperative that
